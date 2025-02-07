@@ -40,6 +40,7 @@ def generate_launch_description():
             package="control",  # Change to your package name
             executable="joystick_node",
             name="joystick",
-            output="screen"
+            output="screen",
+            parameters=[{'use_simulator': False}]
         )
     ])
