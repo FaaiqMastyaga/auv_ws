@@ -9,6 +9,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
 find_package(mavros_msgs REQUIRED)
 
 if(BUILD_TESTING)
@@ -24,7 +25,7 @@ if(BUILD_TESTING)
 endif()
 
 add_executable(joystick_node src/joystick.cpp)
-ament_target_dependencies(joystick_node rclcpp sensor_msgs mavros_msgs)
+ament_target_dependencies(joystick_node rclcpp sensor_msgs geometry_msgs mavros_msgs)
 
 install(TARGETS
   joystick_node
